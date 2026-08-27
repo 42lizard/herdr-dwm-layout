@@ -414,7 +414,7 @@ Do not use running production agents as integration-test panes.
 
 ## Publishing checklist
 
-Before the first public release:
+Before public release:
 
 - Confirm the MIT copyright holder and year in `LICENSE`.
 - Keep the versions in `Cargo.toml` and `herdr-plugin.toml` synchronized.
