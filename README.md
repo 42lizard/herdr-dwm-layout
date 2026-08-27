@@ -76,6 +76,9 @@ Plugins do not modify `~/.config/herdr/config.toml` automatically. Add the
 bindings you want under your existing Herdr configuration. The following map
 matches the original tmux/DWM workflow and assumes `Ctrl+Space` as the prefix:
 
+For a complete real-world example, see
+[42lizard's Herdr configuration](https://gist.github.com/42lizard/a5c9bd0377c8082add47068b1a56d463).
+
 ```toml
 [keys]
 prefix = "ctrl+space"
