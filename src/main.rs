@@ -66,7 +66,6 @@ impl Api for HerdrClient {
 }
 
 #[derive(Clone, Debug, Deserialize, Serialize)]
-#[serde(default)]
 struct TabState {
     enabled: bool,
     orientation: Orientation,
@@ -781,13 +780,5 @@ mod tests {
         assert_eq!(swap.1["source_pane_id"], "w1:p2");
         assert_eq!(swap.1["target_pane_id"], "w1:p1");
         assert_eq!(state.tabs["w1:t1"].pane_ids, ["w1:p2", "w1:p1"]);
-    }
-
-    #[test]
-    fn old_python_state_deserializes_with_new_fields() {
-        let state: State = serde_json::from_value(json!({"version": 1, "tabs": {"w1:t1": {"enabled": true, "orientation": "vertical", "mfact": 0.7, "nmaster": 2, "last_master_pane": null, "last_stack_pane": null}}})).unwrap();
-        let tab = &state.tabs["w1:t1"];
-        assert_eq!(tab.orientation, Orientation::Vertical);
-        assert!(tab.pane_ids.is_empty());
     }
 }
