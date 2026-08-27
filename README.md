@@ -254,7 +254,7 @@ IDs. Writes use a temporary file followed by an atomic rename.
 The plugin listens for:
 
 - `pane.created`: reconcile externally created panes in managed tabs.
-- `pane.closed`: clamp state and rebuild the remaining layout when necessary.
+- `pane.closed` / `pane.exited`: clamp state and rebuild the remaining layout when necessary.
 - `tab.closed`: remove state belonging to the closed tab.
 
 Disabling a tab removes its entry from plugin state. Unmanaged tabs are never

@@ -1,6 +1,6 @@
 id = "42lizard.dwm-layout"
 name = "DWM Layout"
-version = "0.2.0"
+version = "0.2.1"
 min_herdr_version = "0.8.2"
 description = "Live-safe DWM master/stack layouts for Herdr panes"
 platforms = ["linux", "macos"]
@@ -79,6 +79,9 @@ on = "pane.closed"
 command = ["target/release/herdr-dwm-layout", "event"]
 
 [[events]]
-on = "tab.closed"
+on = "pane.exited"
 command = ["target/release/herdr-dwm-layout", "event"]
 
+[[events]]
+on = "tab.closed"
+command = ["target/release/herdr-dwm-layout", "event"]
