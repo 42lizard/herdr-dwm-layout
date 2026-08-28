@@ -47,13 +47,6 @@ herdr plugin list --plugin 42lizard.dwm-layout --json
 herdr plugin action list --plugin 42lizard.dwm-layout
 ```
 
-If the plugin lives in a subdirectory of a larger repository, append that
-subdirectory to the install source:
-
-```sh
-herdr plugin install 42lizard/repository-name/path/to/dwm-layout
-```
-
 ### Local development checkout
 
 `herdr plugin link` does not run manifest build commands. Build first, then
